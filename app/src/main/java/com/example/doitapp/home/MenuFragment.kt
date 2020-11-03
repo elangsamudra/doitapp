@@ -32,7 +32,7 @@ class MenuFragment : Fragment() {
             Food(name = "BIG BAR", image ="https://id.pinterest.com/pin/295548794297725770/?nic_v2=1a13YWogC"),
             Food(name = "KURMOND", image = "@drawable/kurmond"),
             Food(name = "CHOCO CRUNCH", image = "@drawable/chocochruncy"),
-            Food(name= "Tambah Barang", image = "")
+            Food(name= "Tambah Barang", image = "@drawable/chocochruncy")
         )
 
         val bigbarAdapter = FoodAdapter(listfood) { food ->
