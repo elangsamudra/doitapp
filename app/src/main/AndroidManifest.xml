@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".menu.MenuBigbarActivity"></activity>
+        <activity android:name=".menu.AddProductActivity"></activity>
+        <activity android:name=".menu.MenuBigbarActivity" />
         <activity android:name=".menu.chococrunchactivity" />
         <activity android:name=".menu.kurmondactivity" />
         <activity android:name=".menu.bigbaractivity" />

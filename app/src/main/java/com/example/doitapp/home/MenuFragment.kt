@@ -31,10 +31,11 @@ class MenuFragment : Fragment() {
         val listfood = listOf(
             Food(name = "BIG BAR", image ="https://id.pinterest.com/pin/295548794297725770/?nic_v2=1a13YWogC"),
             Food(name = "KURMOND", image = "@drawable/kurmond"),
-            Food(name = "CHOCO CRUNCH", image = "@drawable/chocochruncy")
+            Food(name = "CHOCO CRUNCH", image = "@drawable/chocochruncy"),
+            Food(name= "Tambah Barang", image = "")
         )
 
-        val bigbarAdapter = FoodAdapter(listfood){food ->
+        val bigbarAdapter = FoodAdapter(listfood) { food ->
             startActivity(Intent(context, bigbaractivity::class.java)
                 .putExtra("data",food.name))
 
@@ -50,9 +51,13 @@ class MenuFragment : Fragment() {
 
         }
 
-        val chococrunchAdapter = FoodAdapter(listfood) {food ->
+        val chococrunchAdapter = FoodAdapter(listfood) { food ->
             startActivity(Intent(context, chococrunchactivity::class.java)
                 .putExtra("data",food.name))
+        }
+
+        val addProductActivity = FoodAdapter(listfood) {
+            startActivity(Intent(context, AddProductActivity::class.java))
         }
             rView.apply {
             layoutManager = GridLayoutManager(context, 3)
@@ -60,6 +65,8 @@ class MenuFragment : Fragment() {
                 adapter = bigbarAdapter
                 adapter = kurmondAdapter
                 adapter = chococrunchAdapter
+                adapter = addProductActivity
+
         }
     }
 
